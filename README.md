@@ -1,2 +1,2 @@
 # LLM-Forge
-Creating a LLM from scratch
+Creating a LLM from scratch locally
