@@ -34,3 +34,7 @@ for i in range(split_files):
                 characters = set(text)
                 vocab.update(characters)
         files = files[max_count:]
+
+with open(vocab_file, "w", encoding="utf-8") as vfile:
+    for char in vocab:
+        vfile.write(char + '\n')
