@@ -1,10 +1,36 @@
-from datasets import load_dataset
+import os
+import lzma
+from tqdm import tqdm
 
-# Load the dataset using the custom script
-dataset = load_dataset('/Users/jayeshgajbhar/LLM-Forge/dataextract.py', split='train')
+def xz_files_in_dir(directory):
+    files = []
+    for filename in os.listdir(directory):
+        if filename.endswith(".xz") and os.path.isfile(os.path.join(directory, filename)):
+            files.append(filename)
+    return files
 
-# Iterate over the dataset to get the text content
-for example in dataset:
-    text_content = example['text']
-    # Process the text content as needed
-    print(text_content)  # or save to a file
+folder_path = '/Users/jayeshgajbhar/LLM-Forge/openwebtext'
+output_file = "output{}.txt"
+vocab_file = "vocab.txt"
+split_files = int(input("How many files would you like to split this into?"))
+
+files = xz_files_in_dir(folder_path)
+total_files = len(files)
+
+max_count = total_files // split_files if split_files != 0 else total_files
+
+vocab = set()
+
+
+for i in range(split_files):
+    with open(output_file.format(i), "w", encoding="utf-8") as outfile:
+        for count, filename in enumerate(tqdm(files[:max_count], total=max_count)):
+            if count >= max_count:
+                break
+            file_path = os.path.join(folder_path, filename)
+            with lzma.open(file_path, "rt", encoding="utf-8") as infile:
+                text = infile.read()
+                outfile.write(text)
+                characters = set(text)
+                vocab.update(characters)
+        files = files[max_count:]
