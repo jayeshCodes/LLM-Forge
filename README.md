@@ -237,5 +237,7 @@ The following research papers greatly helped me in understanding the inner worki
 ## Contact
 
 For questions, suggestions, or collaborations, feel free to contact me:
+
 Email : jaygajbhar@gmail.com
+
 LinkedIn : [Jayesh Gajbhar](https://www.linkedin.com/in/jayeshgajbhar/)
