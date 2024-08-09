@@ -14,15 +14,15 @@ This project serves as an exploration into the fundamentals of language models a
 1. [Overview of Language Models](#overview-of-language-models)
    - [Bigram Model](#bigram-model)
    - [GPT Model](#gpt-model)
-2. Features
-3. Installation
-4. Usage
-5. Dataset
-6. Results
+2. [Features](#features)
+3. [Installation](#installation)
+4. [Usage](#usage)
+5. [Dataset](#dataset)
+6. [Results](#results)
 7. [Research Papers](#research-papers)
-8. Contact
+8. [Contact](#contact)
 
-## Overview of Language Models(#overview-of-language-models)
+## Overview of Language Models
 
 ### Bigram Model
 
