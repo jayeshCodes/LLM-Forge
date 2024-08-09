@@ -30,10 +30,11 @@ This project serves as an exploration into the fundamentals of language models a
 - **Probability Calculation**: The model estimates the probability of a word \(w_i\) following another word \(w_{i-1}\) using the formula:
 
   \[
-  P(w_i | w_{i-1}) = \frac{\text{Count}(w_{i-1}, w_i)}{\text{Count}(w_{i-1})}
+   **P(w_i | w_{i-1}) = Count(w_{i-1}, w_i) / Count(w_{i-1})**
   \]
 
-  Here, \(\text{Count}(w_{i-1}, w_i)\) is the number of times the bigram \( (w_{i-1}, w_i) \) occurs in the text, and \(\text{Count}(w_{i-1})\) is the number of times the word \(w_{i-1}\) appears.
+  Count(w_{i-1}, w_i) represents the number of times the word w_i follows the word w_{i-1} in the corpus.
+  Count(w_{i-1}) is the number of times the word w_{i-1} appears in the corpus.
 
 - **Markov Assumption**: The Bigram Model relies on the Markov assumption, which states that the probability of a word depends only on its immediate predecessor, not on any earlier words.
 
@@ -57,7 +58,22 @@ In this project, the Bigram Model is implemented as a baseline to demonstrate th
 
 ### GPT Model
 
-(Add details about the GPT model here.)
+- The GPT Model (Generative Pre-trained Transformer) is a deep learning model designed to generate coherent and contextually relevant text.
+- It is built on the Transformer architecture, which leverages self-attention mechanisms to process input sequences in parallel, allowing the model to capture long-range dependencies in the data more effectively than traditional RNN-based models.
+
+**Key Concepts** :
+
+1. Transformer Architecture:
+   - The Transformer architecture, introduced in the “Attention Is All You Need” paper, is the backbone of the GPT model. It replaces recurrent and convolutional layers with a purely attention-based mechanism, enabling the model to handle dependencies between words over long distances without the need for sequential data processing.
+
+![image](https://github.com/user-attachments/assets/0f34fa22-7293-404c-a5dd-6d003a411489)
+
+2. Self-Attention Mechanism:
+- Self-attention allows the model to weigh the importance of different words in a sequence when encoding a particular word. In GPT, this mechanism helps the model understand the context by considering all the words in the input sequence simultaneously.
+- Scaled Dot-Product Attention: The attention mechanism computes attention scores between pairs of words in the sequence using a scaled dot-product. This is done through the formula:
+
+   ![image](https://github.com/user-attachments/assets/07df1d92-33a8-474d-9f37-f0058815fe0a)
+
 
 ## Research Papers
 
