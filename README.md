@@ -116,6 +116,42 @@ In this project, the Bigram Model is implemented as a baseline to demonstrate th
 **Implementation** :
 Implemented in the **gpt-v1.ipynb** file.
 
+## Features
+
+- **Customizable Architecture**: Easily adjust model parameters to explore different configurations.
+- **Data Handling**: Efficiently process and handle text data for training and evaluation.
+- **Training and Evaluation**: Scripts provided for training both models and evaluating their performance.
+- **Visualization**: Tools for visualizing training progress and model outputs.
+
+## Installation
+
+### Prerequisites
+- Python 3.8 or higher
+- Availability of parallelism, CUDA if you have an NVIDIA GPU or Metal FX (MPS) if you're running Apple Silicon.
+
+### Installation steps:
+
+1. **Clone the repository**:
+
+   `git clone https://github.com/jayeshCodes/LLM-Forge.git`
+
+   `cd LLM-Forge`
+
+2. **Create Virtual Environment**:
+
+   `python3 -m venv llm-env`
+
+   `source llm-env/bin/activate`  
+   On Windows, use `llm-env\Scripts\activate`
+
+3. **Install the Requirements** :
+
+   (Assuming MacOS) `pip3 install numpy pylzma ipykernel jupyter matplotlib torch torchvision torchaudio`
+
+
+## Usage
+
+
 
 ## Research Papers
 
