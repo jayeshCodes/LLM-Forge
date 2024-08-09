@@ -19,8 +19,9 @@ This project serves as an exploration into the fundamentals of language models a
 4. [Usage](#usage)
 5. [Dataset](#dataset)
 6. [Results](#results)
-7. [Research Papers](#research-papers)
-8. [Contact](#contact)
+7. [Conclusion and Future Work](#conclusion-and-future-work)
+8. [Research Papers](#research-papers)
+9. [Contact](#contact)
 
 ## Overview of Language Models
 
@@ -128,6 +129,12 @@ Implemented in the **gpt-v1.ipynb** file.
 ### Prerequisites
 - Python 3.8 or higher
 - Availability of parallelism, CUDA if you have an NVIDIA GPU or Metal FX (MPS) if you're running Apple Silicon.
+- pytorch
+- numpy
+- matplotlib
+- pylzma
+- ipykernel
+- jupyter
 
 ### Installation steps:
 
@@ -151,10 +158,84 @@ Implemented in the **gpt-v1.ipynb** file.
 
 ## Usage
 
+1. To interact with the Bigram Model, run `bigram.ipynb`
+
+2. To train the GPT Model:
+      `python train.py`
+
+3. To interact with the Chatbot:
+      `python chatbot.py`
+
+## Dataset
+
+1. For the Bigram Model, the novel `The Wizard of Oz` was used from `https://www.gutenberg.org/ebooks/55` in plain `utf-8` txt format.
+2. For the GPT model,
+   
+      `https://huggingface.co/datasets/Skylion007/openwebtext/tree/main` dataset was used.
+   
+      Run the `dataextract.py` script to **extract the data as txt** from the .xz files,
+   
+      To **clean the txt files**, run the `dataclean.py` script to **remove all the non-English** characters in the txt files.
+
+## Results
+
+1. Due to limitations in time, data as well as resources, the models have not been trained as extensively as the outgoing versions of ChatGPT.
+2. This results in non-comprehensible results to humans. A few examples from the Bigram as well as GPT models are listed below.
+3. Examples:
+   - **Bigram Model** :
+     
+     ![image](https://github.com/user-attachments/assets/326c10e0-4ba4-4677-821e-fa0d09eeb324)
+
+     Model loss : 2.386
+     
+     Number of epochs : 10000
+
+   - **GPT Model** :
+     
+     ![image](https://github.com/user-attachments/assets/b95b00b5-5d76-44b5-8567-42e1cae044be)
+
+     ![image](https://github.com/user-attachments/assets/28a1a092-1287-4e14-964c-d6e7ef57aace)
+
+     Model loss : 1.985
+
+     After being trained twice on the same dataset.
+
+## Conclusion and Future Work
+
+### Conclusion
+
+This project was undertaken as an effort to delve deeper into the ever evolving world of Language models and to discover the intensiveness of creating a Large Language Model from scratch.
+As such, the GPT model doesn't perform well and needs some more work which will be discussed below.
+
+### Future Work
+
+To help the GPT model perform even better, I believe that the following steps should be taken as the future work of this project:
+
+1. **Training** the model extensively:
+
+   The first and most obvious improvement that can be made to this model, is training it extensively. Currently, it has been trained only for approximately 6000 epochs, which is very less when we realise that the commercial GPT models have been trained for several months. Training this model more extensively and for longer periods of time will help the model form better relations between the tokens and help it make better predictions which will in turn result in better language generation.
+
+2. **Auto-tuning** the hyperparameters:
+
+   Playing around with the hyperparameters and implementing an auto-tuning script which tunes the hyperparameters automatically will greatly boost the learning capabilities of the GPT model. The current hyperparameters being used in this version of the model were chosen after trial and error by myself which is not be the most optimal solution.
+
+3. Adding a script to **Evaluate** the model on more parameters rather than just loss:
+
+   The current version of the model only takes into account loss as a parameter for evaluation. Future iterations may greatly benefit from the addition of an `evaluation.py` scripts which evaluates each model iteration's performance metrics.
+
+4. **Fine-tuning** : This is beyond the scope of this project, but fine-tuning may greatly improve the performance of the current GPT model (coming up soon in future projects).
 
 
 ## Research Papers
 
+The following research papers greatly helped me in understanding the inner workings and mechanisms of how a LLM works, and in turn helped me in creating this project. I am extremely grateful to all the researchers whose work has enabled me to build this project.
+
 - [Attention is All You Need](https://arxiv.org/pdf/1706.03762.pdf)
 - [A Survey of LLMs](https://arxiv.org/pdf/2303.18223.pdf)
 - [QLoRA: Efficient Finetuning of Quantized LLMs](https://arxiv.org/pdf/2305.14314.pdf)
+
+## Contact
+
+For questions, suggestions, or collaborations, feel free to contact me:
+Email : jaygajbhar@gmail.com
+LinkedIn : [Jayesh Gajbhar](https://www.linkedin.com/in/jayeshgajbhar/)
