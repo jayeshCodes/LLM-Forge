@@ -25,14 +25,14 @@ device = torch.device("mps" if torch.backends.mps.is_available() else "cpu") # u
 print(device)
 
 # Adding the argparser to parse arguments
-parser = argparse.ArgumentParser(description='demo')
-parser.add_argument('-batch_size', type=str, required=True, help='Please provide a batch size')
+# parser = argparse.ArgumentParser(description='demo')
+# parser.add_argument('-batch_size', type=str, required=True, help='Please provide a batch size')
 
-args = parser.parse_args()
+# args = parser.parse_args()
 
-# now argument value is usable in our program
-print(f'batch size: {args.batch_size}')
-batch_size = args.batch_size
+# # now argument value is usable in our program
+# print(f'batch size: {args.batch_size}')
+# batch_size = args.batch_size
 
 chars = ""
 
