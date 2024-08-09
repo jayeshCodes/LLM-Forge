@@ -14,9 +14,15 @@ This project serves as an exploration into the fundamentals of language models a
 1. [Overview of Language Models](#overview-of-language-models)
    - [Bigram Model](#bigram-model)
    - [GPT Model](#gpt-model)
-2. [Research Papers](#research-papers)
+2. Features
+3. Installation
+4. Usage
+5. Dataset
+6. Results
+7. [Research Papers](#research-papers)
+8. Contact
 
-## Overview of Language Models
+## Overview of Language Models(#overview-of-language-models)
 
 ### Bigram Model
 
@@ -106,6 +112,9 @@ In this project, the Bigram Model is implemented as a baseline to demonstrate th
 - Text Generation: GPT is widely used for generating human-like text for chatbots, content creation, and storytelling.
 - Summarization: It can generate concise summaries of long documents while maintaining the essential information.
 - Translation: Although not primarily designed for translation, GPT can perform translation tasks by being fine-tuned on parallel corpora.
+
+**Implementation** :
+Implemented in the **gpt-v1.ipynb** file.
 
 
 ## Research Papers
